@@ -15,9 +15,9 @@ const firebaseConfig = {
     appId: "1:471604302065:web:cf7d02dae4e3d7b715d950",
     measurementId: "G-YST2Q6D0WP"
 };
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-//const app = createApp(App)
+const appF = initializeApp(firebaseConfig);
+const analytics = getAnalytics(appF);
+const app = createApp(App)
 
 app.use(router)
 
