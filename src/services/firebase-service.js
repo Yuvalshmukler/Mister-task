@@ -47,7 +47,12 @@ async function query() {
 async function remove(taskId) {
     try {
         console.log('before removed');
-        await deleteDoc(collection(db, 'task', taskId))
+        const docRef = await doc(db, 'task', taskId)
+        console.log('docRef',docRef);
+         await deleteDoc(docRef)
+        
+      
+        //await deleteDoc(collection(db, 'task', taskId))
         console.log('removed');
 
     } catch (err) {

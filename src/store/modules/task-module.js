@@ -48,8 +48,8 @@ export default {
         },
         removeTask: async ({ commit }, { id }) => {
             try {
-                const taskId = await taskService.remove(id)
-                commit({ type: 'removeTask', id: taskId })
+                await taskService.remove(id)
+                commit({ type: 'removeTask', id})
             } catch (err) {
                 console.log('Had error getting a user', err)
             }
