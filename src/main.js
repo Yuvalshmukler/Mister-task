@@ -1,11 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import './assets/main.css'
+import store from './store'
+import './assets/styles/style.scss'
+
+const app = createApp(App)
 
 
+
+
+<<<<<<< HEAD
 const firebaseConfig = {
     apiKey: "AIzaSyCelphSDNGn01OFklgHkc8KO6shq1cfZtw",
     authDomain: "mister-task-b6059.firebaseapp.com",
@@ -18,7 +22,9 @@ const firebaseConfig = {
 const appF = initializeApp(firebaseConfig);
 const analytics = getAnalytics(appF);
 const app = createApp(App)
+=======
+>>>>>>> 35c1988fca47e7a4698dac336566f52e8c8a51b2
 
 app.use(router)
-
+app.use(store)
 app.mount('#app')
