@@ -1,6 +1,6 @@
 <template>
     <section class="main-layout">
-        <h1>These are your tasks for today</h1>
+        <h1>These are your tasks for today !!!!!!!</h1>
         <task-list v-if="tasks" @removeTask="onRemoveTask" :tasks="tasks"></task-list>
         <button class="add-btn" @click="goToEdit">Add Task</button>
     </section>
